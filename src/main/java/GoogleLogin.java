@@ -32,7 +32,7 @@ public class GoogleLogin {
 
         driver.get("https://accounts.google.com/signin");
 
-        driver.findElement(By.id("identifierId")).sendKeys("m.kornacki.10@gmail.com");
+        driver.findElement(By.id("identifierId")).sendKeys("Your Email"); //Enter E-mail
 
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
@@ -42,7 +42,7 @@ public class GoogleLogin {
         WebDriverWait wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("#password > div.aCsJod.oJeWuf > div > div.Xb9hP > input")));
 
-        password.sendKeys("madafaka1929");
+        password.sendKeys("Your Password"); // <===enter password
 
         driver.findElement(By.id("passwordNext")).click();
 
